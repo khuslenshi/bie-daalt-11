@@ -35,6 +35,19 @@
 `find()` → SQLException throw гэж comment байна
 → API хэрэглэгчид ойлгомжгүй
 
+## Сайжруулсан API
+
+Шинэ API нь дараах сайжруулалтыг хийсэн:
+
+- `usr_mgr` → `UserManager` болгон нэршлийг ойлгомжтой болгосон
+- `get_u` → `getUserById`, `getUserByEmail` болгон тусад нь ялгасан
+- `db_conn`, `users_arr`-г private болгож мэдээллийн далдлалтыг сайжруулсан
+- `any` төрлийг устгаж, тодорхой `User` type ашигласан
+- `do_user_op` method-ыг устгаж, оронд нь `createUser`, `deleteUser` зэрэг тусдаа method-ууд үүсгэсэн
+- Flag parameter (0,1,2) ашиглахыг зогсоосон
+- String error (`ERR_404`) буцаахын оронд null эсвэл boolean буцаадаг болгосон
+- Method бүрийг нэг л үүрэгтэй (Single Responsibility) болгосон
+
 ## A.2 Сангийн дизайн
 
 Энэ хэсэгт нэг public interface болон 3 өөр хэрэгжилттэй сан зохион байгуулна.
