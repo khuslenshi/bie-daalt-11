@@ -53,7 +53,7 @@
 Энэ хэсэгт нэг public interface болон 3 өөр хэрэгжилттэй сан зохион байгуулна.
 
 Сонгосон сэдэв:
-(жишээ: Cache / Rate Limiter / Retry Policy)
+Cache library (LRU, LFU, TTL)
 
 (Дараа нь дэлгэрүүлнэ)
 
