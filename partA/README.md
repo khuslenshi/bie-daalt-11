@@ -50,10 +50,22 @@
 
 ## A.2 Сангийн дизайн
 
-Энэ хэсэгт нэг public interface болон 3 өөр хэрэгжилттэй сан зохион байгуулна.
+Сонгосон сэдэв: Cache library (LRU, LFU, TTL)
 
-Сонгосон сэдэв:
-Cache library (LRU, LFU, TTL)
+Энэхүү сан нь нэг public `Cache` interface болон 3 concrete implementation-оос бүрдэнэ.
 
-(Дараа нь дэлгэрүүлнэ)
+### Дизайны шийдэл
+- `Cache` interface нь нийтлэг contract өгнө
+- `LRUCache`, `LFUCache`, `TTLCache` нь дотоод хэрэгжилт
+- `CacheFactory` ашиглан implementation нууцалсан
+- `CacheException` ашиглан custom алдаа боловсруулсан
+
+### Unit Test
+Нийт 15 ширхэг unit test бичиж дараах зүйлсийг шалгасан:
+- put/get
+- capacity handling
+- remove
+- clear
+- size
+- TTL expiration
 
