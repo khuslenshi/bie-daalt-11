@@ -1,0 +1,23 @@
+{
+  "info": {
+    "name": "PartB API",
+    "_postman_id": "b1c2d3e4f5",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET Root",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/"
+      }
+    },
+    {
+      "name": "GET Items",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/items"
+      }
+    }
+  ]
+}
