@@ -1,0 +1,73 @@
+openapi: 3.0.0
+info:
+  title: Book REST API
+  version: 1.0.0
+  description: CRUD API for managing books
+
+servers:
+  - url: http://localhost:3000/api
+
+paths:
+  /books:
+    get:
+      summary: Get all books
+      parameters:
+        - in: header
+          name: x-api-key
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+
+    post:
+      summary: Create a new book
+      parameters:
+        - in: header
+          name: x-api-key
+          required: true
+          schema:
+            type: string
+      responses:
+        '201':
+          description: Book created
+
+  /books/{id}:
+    get:
+      summary: Get book by ID
+      parameters:
+        - in: header
+          name: x-api-key
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+        '404':
+          description: Book not found
+
+    put:
+      summary: Update book
+      parameters:
+        - in: header
+          name: x-api-key
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Updated
+
+    delete:
+      summary: Delete book
+      parameters:
+        - in: header
+          name: x-api-key
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Deleted
