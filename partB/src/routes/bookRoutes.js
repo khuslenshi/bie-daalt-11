@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const controller = require("../controllers/bookController");
-const apiKeyAuth = require("../middle/apiKeyAuth");
+const apiKeyAuth = require("../middleware/apiKeyAuth");
 
 
 router.get("/books", controller.getAllBooks);
