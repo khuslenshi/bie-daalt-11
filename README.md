@@ -10,3 +10,17 @@
 ## Бүтэц
 - partA - API дизайн ба сан
 - partB - REST API ба тест
+### 🅰️ Part A — Cache System Design
+- LRU Cache
+- LFU Cache
+- TTL Cache
+- Factory Pattern ашигласан
+- TypeScript дээр хэрэгжүүлсэн
+- Unit test (Jest)
+
+### 🅱️ Part B — Backend API
+- Express.js server
+- CRUD API бүтэц
+- Package.json scripts засварласан
+- Production run боломжтой
+
