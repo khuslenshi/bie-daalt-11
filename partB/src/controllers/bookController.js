@@ -21,6 +21,9 @@ exports.createBook = (req, res) => {
   if (!title || !author || !price) {
     return res.status(400).json({ message: "Missing required fields" });
   }
+  if (typeof price !== "number" || price <=0){
+   return res.status(400).json({message: "Price must be positive number"});
+  }
 
   const newBook = {
     id: books.length + 1,
@@ -39,6 +42,9 @@ exports.updateBook = (req, res) => {
 
   if (!book) {
     return res.status(404).json({ message: "Book not found" });
+  }
+    if (price !== undefined && (typeof price !== "number" || price <= 0)) {
+    return res.status(400).json({ message: "Price must be positive number" });
   }
 
   const { title, author, price } = req.body;
